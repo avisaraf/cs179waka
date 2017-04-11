@@ -1,27 +1,57 @@
 
 <!-- Most of the code for the map was taken from http://demos.jquerymobile.com/1.4.0/map-geolocation/ -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" /></style>
+<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" /></style>
 <link rel="stylesheet" href="project.css"/></style>
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGFpaaLEaqur_u2SknK70yCYzxLMlqmh0&sensor=false"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGFpaaLEaqur_u2SknK70yCYzxLMlqmh0"
 type="text/javascript"></script>
 
-<!-- Trying to get it to work on Github Pages -->
-<script default-src 'none'; font-src fonts.gstatic.com; frame-src platform.twitter.com; img-src data: www.google-analytics.com code.jquery.com; script-src 'unsafe-inline' www.google-analytics.com code.jquery.com; style-src 'unsafe-inline' fonts.googleapis.com code.jquery.com>
-</script>
+ Trying to get it to work on Github Pages -->
 
-<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="project.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+<html>
+  <head>
+        <title>jQuery mobile with Google maps</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGFpaaLEaqur_u2SknK70yCYzxLMlqmh0"></script>
+        <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <scripy type="text/javascript" google.charts.load("current", {packages:["corechart"]});
+                                       google.setOnLoadCallback();
+        ></script> -->
 
-<!-- Put title and maybe add a search bar for map (just need a text box) -->
-
-<div data-role="page" id="map-page" data-url="map-page">
-    <div data-role="header" data-theme="a">
-    <h1>RunElite</h1>
-    </div>
-    <div role="main" class="ui-content" id="map-canvas">
-    </div>
-</div>
-
-<!-- Put menu and other stuff -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script>
+        // Load the Visualization API and the columnchart package.
+        google.load('visualization', '1', {packages: ['columnchart']});
+        </script>
+<script src="maps.js"></script>
+</head>
+<body>
+       <div id="basic-map" data-role="page">
+           <div data-role="header">
+               <h1><a data-ajax="false">RunElite</a></h1>
+           </div>
+           <div data-role="content">
+               <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+                   <div id="map_canvas" style="height:350px;"></div>
+               </div>
+               <div data-role="fieldcontain">
+                   <label for="start">Start</label>
+                   <input type="text" name="start" id="start" value=""/>
+               </div>
+               <div data-role="fieldcontain">
+                    <label for="end">Destination</label>
+                    <input type="text" name="end" id="end" value=""/>
+               </div>
+               <a href="#" id="directions-button" data-role="button" data-inline="true" data-mini="true">Get Directions</a>
+               <div data-role="content" id="elevation_chart"></div>
+               <div id="results" style="display:none;">
+                   <div id="directions"></div>
+               </div>
+           </div>
+       </div>
+   </body>
+</html>
