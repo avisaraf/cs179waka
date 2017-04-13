@@ -64,8 +64,7 @@
             }
         })
         .on('success.form.bv', function(e) {
-            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                $('#contact_form').data('bootstrapValidator').resetForm();
+            $('#success_message').slideDown({ opacity: "show" }, "slow");// Do something ...''
 
             // Prevent form submission
             e.preventDefault();
@@ -76,9 +75,18 @@
             // Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
 
+
             // Use Ajax to submit form data
             $.post($form.attr('action'), $form.serialize(), function(result) {
                 console.log(result);
             }, 'json');
         });
+
+        document.getElementById("submit").onclick = function () {
+        location.href = "info/fitness.html";
+    };
+
 });
+   
+
+
