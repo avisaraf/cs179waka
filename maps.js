@@ -129,7 +129,7 @@ function plotElevation(elevations, status) {
   });
 }
 
-$(document).live("pagebeforeshow", "#map_page", function() {
+$(document).on("pagebeforeshow", function() {
     navigator.geolocation.getCurrentPosition(locSuccess, locError);
 });
 
