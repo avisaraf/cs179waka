@@ -1,22 +1,10 @@
 <!-- Alex Bartlett -->
 
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html>
+<meta charset="UTF-8">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Help Page</title>
-		<meta name="description" content="Help" />
-		<meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
-		<meta name="author" content="Codrops" />
-		<!-- <link rel="shortcut icon" href="..favicon.ico"> -->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-<!-- Include meta tag to ensure proper rendering and touch zooming -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<title>Feedback</title>
 <!-- Include jQuery Mobile stylesheets -->
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
@@ -25,9 +13,6 @@
 
 <!-- Include the jQuery Mobile library -->
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
-		<!-- <script src="js/modernizr.custom.25376.js"></script> -->
 	</head>
 	<body>
 		<div data-role="header">
@@ -35,37 +20,25 @@
 		</div>
 		<div data-role="navbar" id="navbar">
 						 <ul>
-							 <li><a href="index.html">Map</a></li>
-							 <li><a href="Information/index.html">Fitness</a></li>
-							 <li><a href="weather.html">Weather</a></li>
-							 <li><a href="help.html">Help</a></li>
+							 <li><a href="/index.html">Map</a></li>
+							 <li><a href="/fitness.html">Fitness</a></li>
+							 <li><a href="/weather.html">Weather</a></li>
+							 <li><a href="/help.html">Help</a></li>
 						 </ul>
 		</div>
-		<div id="perspective" class="perspective effect-airbnb">
-			<div class="container">
-				<div class="wrapper"><!-- wrapper needed for scroll -->
-					<!-- Top Navigation -->
-					<div class="main clearfix">
-						<header class="codrops-header">
-							<h1> Help </h1>
-							</br>
-							<!-- <img src="speedbump.gif" alt="speed bump sign" style="width:250px;height:250px;"> -->
-						</br>
-						<header class="codrops-header">
-						<h2> Contact: </h2>
-							<p> If you experience any issues or bugs with our app, please contact alex@runelite.com for a prompt and thorough response</p>
-						<h2> Suggestions: </h2>
-							<input type="text" name="sug" placeholder="Type suggestion here!">
-							<br>
-							<br>
-							<input type="submit" value="Submit">
+		<div class="center">
+			<div data-role="content">
 
+				<label for="Feedback">Questions? Concerns? Tell us!</label>
+				<textarea name="feedback" id="feedback"></textarea>
 
-					</div><!-- /main -->
-				</div><!-- wrapper -->
-			</div><!-- /container -->
-		</div><!-- /perspective -->
-		<script src="js/classie.js"></script>
-		<script src="js/menu.js"></script>
+			<div class="ui-field-contain">
+			<a href="#positionSelector" data-transition="pop" class="ui-btn ui-corner-all ui-shadow" data-rel="popup" data-position-to="#position-header">Submit</a>
+			<div data-role="popup" id="positionSelector" class="ui-content" data-theme="b">
+				<p>Thank you for your feedback! We'll be in touch.</p>
+			</div>
+		</div>
+		</div>
+	</div>
 	</body>
 </html>

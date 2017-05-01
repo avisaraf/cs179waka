@@ -6,14 +6,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Weather page</title>
-		<!-- <meta name="description" content="Perspective Page View Navigation: Transforms the page in 3D to reveal a menu" /> -->
+		<title>Weather</title>
 		<meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
 		<meta name="author" content="Codrops" />
-		<!-- <link rel="shortcut icon" href="../favicon.ico"> -->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<!-- <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
+		<link rel="stylesheet" type="text/css" href="project.css" />
 <!-- Include meta tag to ensure proper rendering and touch zooming -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,8 +21,6 @@
 
 <!-- Include the jQuery Mobile library -->
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-		<script src="js/modernizr.custom.25376.js"></script>
 	</head>
 	<body>
 		<div data-role="header">
@@ -34,17 +28,16 @@
 		</div>
 		<div data-role="navbar" id="navbar">
 						 <ul>
-							 <li><a href="index.html">Map</a></li>
-							 <li><a href="Information/fitness.html">Fitness</a></li>
-							 <li><a href="weather.html">Weather</a></li>
-							 <li><a href="help.html">Help</a></li>
+							 <li><a href="/index.html">Map</a></li>
+							 <li><a href="/fitness.html">Fitness</a></li>
+							 <li><a href="/weather.html">Weather</a></li>
+							 <li><a href="/help.html">Help</a></li>
 						 </ul>
 		</div>
+		<div data-role="content">
 		<div id="perspective" class="perspective effect-airbnb">
-			<div class="container">
-				<div class="wrapper"><!-- wrapper needed for scroll -->
+			<div class="center">
 					<!-- Top Navigation -->
-					<div class="main clearfix">
 						<header class="codrops-header">
 							<h1> Weather </h1>
 						</br>
@@ -57,10 +50,8 @@
 							<p> Beware of hills and wet areas, they may be icy </p>
 						<h2> Clothing: </h2>
 							<p> Beware of the cold temperature! Consider wearing a hat and gloves or other warm clothing </p>
-					</div><!-- /main -->
-				</div><!-- wrapper -->
 			</div><!-- /container -->
 		</div><!-- /perspective -->
-		<!-- <script src="js/classie.js"></script> -->
+	</div>
 	</body>
 </html>
